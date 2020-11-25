@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Feliratkezelő</string>
+
+    <!-- Top right menu items -->
+    <string name="action_settings">Beállítások</string>
+    <string name="action_info">Információ</string>
+
+    <!-- File selection screen -->
+    <string name="select_prompt">Válassz feliratfájlt!</string>
+    <string name="no_file_selected">Nincs választott fájl&#8230;</string>
+    <string name="browse_button_text">Keresés</string>
+    <string name="reset_selected_file">Választás visszavonása</string>
+    <string name="edit_button_text">Szöveg szerkesztése</string>
+    <string name="adjust_button_text">Időzítés módosítása</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Mégse</string>
+    <string name="create_new">Új feliratfájl létrehozása</string>
+
+    <!-- Permissions -->
+    <string name="need_read_permission">Szükéges a FÁJL OLVASÁS engedély!</string>
+    <string name="need_write_permission">Szükséges a FÁJL ÍRÁS engedély!</string>
+
+    <!-- Settings screen -->
+    <string name="selected_extensions">Formátumok</string>
+    <string name="enabled">Engedve</string>
+    <string name="disabled">Tiltva</string>
+    <string name="default_folder">Alapértelmezett mappa</string>
+    <string name="no_folder_selected">Nincs választott mappa&#8230;</string>
+    <string name="def_folder_deleted">Valaki törölte az alapértelmezett mappát</string>
+    <string name="reset_def_folder">Alapértelmezett mappa törlése</string>
+    <string name="default_folder_was_reset">Alapértelmezett mappa törölve</string>
+    <string name="no_extension_selected">Egy formátum sincs engedélyezve!</string>
+    <string name="enabled_extensions_info">
+        A tiltott felirat formátumok teljesen láthatatlanok az alkalmazás számára.
+    </string>
+    <string name="default_folder_info">
+        Az alapértelmezett mappa a meglévő fájlok választásánál, és újak mentésénél lesz használva.
+    </string>
+
+    <!-- Timing adjuster screen -->
+    <string name="adjuster_label">Időzítés igazítása</string>
+    <string name="delay_or_speed_up">Művelet:</string>
+    <string name="delay">Késleltetés</string>
+    <string name="speed_up">Gyorsítás</string>
+    <string name="save">Mentés</string>
+    <string name="dont_save">Ne mentsen</string>
+    <string name="seconds">másodperc</string>
+    <string name="milliseconds">ezred mp.</string>
+    <string name="invalid_timings">Érvénytelen időzítés!</string>
+    <string name="file_saved">Módosítások elmentve!</string>
+    <string name="file_save_error">Nem lehetett elmenteni a módosításokat!</string>
+    <string name="adjust_operation_performed">%1$s sikeresen elvégezve</string>
+    <string name="unsaved_changed">Vannak nem mentett műveletek!</string>
+    <string name="invalid_subtitle_file">"Hibás feliratfájl: \n%1$s"</string>
+    <string name="adjuster_info_invalid">
+        Az érvénytelen időzítések sárga háttérrel látszanak. Ezeket nem lehet módosítani!
+    </string>
+    <string name="adjuster_info_adjust_individually">
+        Egyenként módosíthatod a komponenseket ha megérinted őket!
+    </string>
+
+    <!-- The edit text activity -->
+    <string name="edit_text_label">Szöveg szerkesztése</string>
+    <string name="select_component_prompt">Válassz komponenst</string>
+    <string name="edit_text_info">Koppants a komponensekre a szöveg szerkesztéséhez</string>
+    <string name="edit">Módosítás</string>
+    <string name="invalid_text">Meg kell adnod valamilyen szöveget!</string>
+    <string name="edit_text_performed">Szöveg módosítva!</string>
+
+    <!-- Add and remove components activity -->
+    <string name="add_remove_label">Hozzáadás/törlés</string>
+    <string name="remove_component_info">Érints meg egy komponents a törléshez</string>
+    <string name="add_new_component_here">Új komponens ide</string>
+    <string name="add_new_component_to_beginning">Új komponens az elejére</string>
+    <string name="create_new_component">Új komponens létrehozása</string>
+    <string name="confirm_delete_component">Biztos törölni akarod ezt a komponenst?</string>
+    <string name="dont_ask_again">Ne kérdezz meg újra</string>
+    <string name="delete">Törlés</string>
+
+    <!-- Create new component activity -->
+    <string name="text_to_display">Megjelenítendő szöveg</string>
+    <string name="from_info">Megjelenítési időpont</string>
+    <string name="to_info">Eltüntetési időpont</string>
+    <string name="hours">óra</string>
+    <string name="minute">perc</string>
+    <string name="milliseconds_full">ezredmp.</string>
+    <string name="create">Létrehozás</string>
+    <string name="end_before_start_error">
+        Eltüntetési idő (%1$s) nem lehet a megjelenítési idő (%2$s) előtt!</string>
+    <string name="overlap_warning">Hiba: Összecsúszás</string>
+    <string name="start_before_prev_error">
+        A megjelenítési idő (%1$s) az előző komponens eltüntetési ideje (%2$s) előtt van!
+    </string>
+    <string name="end_after_next_error">
+        Az eltüntetési idő (%1$s) a következő komponens megjelenítési ideje (%2$s) után van!
+    </string>
+
+    <!-- Convert activity -->
+    <string name="convert">Konvertálás</string>
+
+    <!-- Create new file sub activity -->
+    <string name="create_file_label">Új fájl létrehozása</string>
+    <string name="file_name">Fájlnév</string>
+    <string name="no_file_name">Írd ide a fájlnevet…</string>
+    <string name="file_extension">Feliratfájl típusa</string>
+    <string name="select_save_folder">Válassz mentési helyet</string>
+    <string name="create_file">Fájl létrehozása</string>
+    <string name="dont_enter_extension">Itt ne add meg a fájl kiterjesztését, alul válaszd ki!</string>
+    <string name="must_select_save_folder">Választanod kell egy mentési helyet!</string>
+    <string name="must_select_file_name">Meg kell adnod egy fájlnevet!</string>
+    <string name="file_create_error">
+        Nem sikerült létrehozni a fájlt! Ellenőrizd hogy a választott mappa írható-e!
+    </string>
+    <string name="file_exists">A fájl már létezik! Felül akarod írni?</string>
+    <string name="overwrite">Felülírás</string>
+
+    <!-- Conversion -->
+    <string name="convert_label">Fájl konvertálása</string>
+    <string name="convert_into">%1$s konvertálása ebbe</string>
+    <string name="no_other_extensions">
+        Csak a %1$s típus van engedélyezve! Engedélyezz többet a beállításoknál a konvertáláshoz!
+    </string>
+    <string name="convert_successful">Sikeres konverzió</string>
+</resources>

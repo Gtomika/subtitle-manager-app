@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+if(project.hasProperty("AndroidProjects.signing")
+        && new File(project.property("AndroidProjects.signing") + "androidsigning.gradle").exists()) {
+    apply from: project.property("AndroidProjects.signing") + "androidsigning.gradle"
+}
+
+if(project.hasProperty("AndroidProjects.ads")
+        && new File(project.property("AndroidProjects.ads") + "subtitle_manager_ads.gradle").exists()) {
+    apply from: project.property("AndroidProjects.ads") + "subtitle_manager_ads.gradle"
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.gaspar.subtitleadjuster"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 13
+        versionName "1.2.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release { //release version with real ads
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "bool", "is_debug", "false"
+            //real ad constants and signing configs are only on my computer
+        }
+        debug { //debug version with test ads and sample app ID
+            debuggable true
+            signingConfig signingConfigs.debug
+            resValue "bool", "is_debug", "true"
+            //sample app ID from ad mob website
+            resValue "string", "ad_mob_app_id", "ca-app-pub-3940256099942544~3347511713"
+            //this is only a test ad constant, not the real ones for the app
+            resValue "string", "settings_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "adjust_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "edittext_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "addremove_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "convert_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "newfile_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.obsez.android.lib.filechooser:filechooser:1.2.0'
+    implementation "androidx.preference:preference:1.1.1"
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+}

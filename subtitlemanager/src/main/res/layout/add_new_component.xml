@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addNewComponent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:theme="@style/small_text">
+
+    <TextView
+        android:id="@+id/addComponentPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:text="@string/add_new_component_here"
+        android:textSize="18sp"
+        android:theme="@style/small_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addNewComponentButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/dark_background_black_border_rounded"
+        android:contentDescription="@string/add_new_component_here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addComponentPrompt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/ic_input_add"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

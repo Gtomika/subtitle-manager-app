@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B0E0E6</color>
+    <color name="colorPrimaryDark">#5F9EA0</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="warning">#FFFF66</color>
+    <color name="error">@android:color/holo_red_light</color>
+</resources>

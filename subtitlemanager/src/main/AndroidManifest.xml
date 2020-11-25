@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gaspar.subtitlemanager">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/sub_manager_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/sub_manager_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:node="replace"
+        android:fullBackupContent="true">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_mob_app_id"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Main activity, file selector -->
+        <activity
+            android:name="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- The settings activity -->
+        <activity
+            android:name="com.gaspar.subtitlemanager.settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- The timings adjuster activity -->
+        <activity
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:name="com.gaspar.subtitlemanager.adjusting.AdjusterActivity"
+            android:label="@string/adjuster_label"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- The text editor activity -->
+        <activity
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:name="com.gaspar.subtitlemanager.TextEditActivity"
+            android:label="@string/edit_text_label"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- The add/remove components activity -->
+        <activity
+            android:name=".addremove.AddRemoveActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:label="@string/add_remove_label"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- Sub activity for creating a component -->
+        <activity
+            android:name=".addremove.CreateComponentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:label="@string/create_new_component"
+            android:parentActivityName="com.gaspar.subtitlemanager.addremove.AddRemoveActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- Sub activity for creating a new file -->
+        <activity
+            android:name=".CreateNewFileActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:label="@string/create_file_label"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <!-- The convert activity -->
+        <activity
+            android:name=".conversion.ConvertActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:label="@string/convert_label"
+            android:parentActivityName="com.gaspar.subtitlemanager.FileSelectorActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name="com.obsez.android.lib.filechooser.permissions.PermissionActivity"/>
+    </application>
+
+</manifest>
